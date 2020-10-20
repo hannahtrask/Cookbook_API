@@ -30,7 +30,11 @@ router.put('/name/:_id', async (req, res) => {
 	res.json({ status: 200, author: author });
 });
 
-// Update the cookbook using Postman.
+// delete route
+router.delete('/:id', async (req, res) => {
+    res.json(await Author.findByIdAndRemove(req.params.id))
+})
+
 
 // Bonus: Write the route to delete cookbooks by author name. (hint: There are a couple on different ways to do this and you may have to change/add code in other files)
 //this will just delete an author
