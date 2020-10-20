@@ -3,8 +3,8 @@ const Schema = mongoose.Schema
 
 
 const authorSchema = new Schema({
-    firstName: {type:String, required:true},
-    lastName: {type:String, required:true},
+    firstName: String,
+    lastName: String,
     cookbooks: [
         {
             ref: 'Cookbook',
